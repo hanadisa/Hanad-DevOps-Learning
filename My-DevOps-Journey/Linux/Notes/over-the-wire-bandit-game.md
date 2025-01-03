@@ -17,6 +17,16 @@
    - [Bandit Level 7 → Level 8](#bandit-level-7--level-8)
    - [Bandit Level 8 → Level 9](#bandit-level-8--level-9)
    - [Bandit Level 9 → Level 10](#bandit-level-9--level-10)
+   - [Bandit Level 10 → Level 11](#bandit-level-10--level-11)
+   - [Bandit Level 11 → Level 12](#bandit-level-11--level-12)
+   - [Bandit Level 12 → Level 13](#bandit-level-12--level-13)
+   - [Bandit Level 13 → Level 14](#bandit-level-13--level-14)
+   - [Bandit Level 14 → Level 15](#bandit-level-14--level-15)
+   - [Bandit Level 15 → Level 16](#bandit-level-15--level-16)
+   - [Bandit Level 16 → Level 17](#bandit-level-16--level-17)
+   - [Bandit Level 17 → Level 18](#bandit-level-17--level-18)
+   - [Bandit Level 18 → Level 19](#bandit-level-18--level-19)
+   - [Bandit Level 19 → Level 20](#bandit-level-19--level-20)
  - [Command Summary Sheet](#command-summary-sheet)
 
 
@@ -583,7 +593,440 @@ ssh bandit10@bandit.labs.overthewire.org -p 2220
 
 ---
 
-## To be continued...⏳
+##  Bandit Level 10 → Level 11
+---
+
+### 🎯 Level Goal
+The password for **Bandit Level 11** was stored in a file named  `data.txt` containing base64-encoded data. My task was to decode the data and retrieve the password.
+
+---
+
+### 💻 Steps I Followed:
+1. First, I logged into the Bandit Level 10 server using the password retrieved from the previous level:
+
+```bash
+ssh bandit10@bandit.labs.overthewire.org -p 2220
+```
+
+2. Displayed the contents of the `data.txt` file:
+
+```bash
+cat data.txt
+```
+
+3. Decoded the base64-encoded data using the `base64` command:
+
+```bash
+base64 -d data.txt
+```
+
+4. The decoded output revealed the password for Bandit Level 11. I used this password to log into the next level:
+
+```bash
+ssh bandit11@bandit.labs.overthewire.org -p 2220
+```
+
+<div style="text-align: center; margin: 20px 0;">
+  <h2 style="font-family: 'Arial', sans-serif; color: #FF5722; font-size: 24px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">🎥Live Demonstration</h2>
+  <div style="width: 400px; margin: 0 auto; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/Linux/Notes/Images/Level%2010-11.gif?raw=true" width="100%" />
+  </div>
+</div>
+
+---
+
+##  Bandit Level 11 → Level 12
+---
+
+### 🎯 Level Goal
+The password for Bandit Level 12 was stored in the file `data.txt`, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions (ROT13 encryption). My task was to decode this file to retrieve the password.
+
+---
+
+### 💻 Steps I Followed:
+1. First, I logged into the Bandit Level 11 server using the password retrieved from the previous level:
+
+```bash
+ssh bandit11@bandit.labs.overthewire.org -p 2220
+```
+
+2. I listed the directory contents to confirm the presence of `data.txt`:
+
+```bash
+ls
+```
+
+3. To view the contents of the file, I used the `cat` command:
+
+```bash
+cat data.txt
+```
+
+4. The decode the ROT13 encryption, I used the `tr` command:
+
+```bash
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+```
+
+5. The decoded content revealed the password for Bandit level 12
+
+3. Using the retireved password, I logged into Bandit Level 12:
+
+```bash
+ssh bandit12@bandit.labs.overthewire.org -p 2220
+```
+
+<div style="text-align: center; margin: 20px 0;">
+  <h2 style="font-family: 'Arial', sans-serif; color: #FF5722; font-size: 24px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">🎥Live Demonstration</h2>
+  <div style="width: 400px; margin: 0 auto; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/Linux/Notes/Images/Level%2011-12.gif?raw=true" width="100%" />
+  </div>
+</div>
+
+---
+
+##  Bandit Level 12 → Level 13
+---
+
+### 🎯 Level Goal
+The password for Bandit Level 13 was stored in the file `data.txt`, a hexdump of a file repeatedly compressed. My task was to extract and decompress the file until I retrieved the password.
+
+---
+
+### 💻 Steps I Followed:
+1. First, I logged into the Bandit Level 12 server using the password retrieved from the previous level:
+
+```bash
+ssh bandit12@bandit.labs.overthewire.org -p 2220
+```
+
+2. Created a temporary directory to work in:
+
+```bash
+cd /tmp
+mkdir hanad
+cd hanad
+```
+
+3. Copied the data.txt file to the temporary directory:
+
+```bash
+cp ~/data.txt .
+```
+
+4. Converted the hexdump back into binary using `xxd`:
+
+```bash
+xxd -r data.txt binary_file
+```
+
+5. Identified the file type using `file`:
+
+```bash
+file binary_file
+```
+
+6. Repeatdely decompressed the file (e.g., `gunzip`, `bunzip2`, `tar`, etc.) until the password was revealed.
+
+7. Using the retireved password, I logged into Bandit Level 13:
+
+```bash
+ssh bandit13@bandit.labs.overthewire.org -p 2220
+```
+
+<div style="text-align: center; margin: 20px 0;">
+  <h2 style="font-family: 'Arial', sans-serif; color: #FF5722; font-size: 24px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">🎥Live Demonstration</h2>
+  <div style="width: 400px; margin: 0 auto; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/Linux/Notes/Images/Level%2012-13.gif?raw=true" width="100%" />
+  </div>
+</div>
+
+---
+
+##  Bandit Level 13 → Level 14
+---
+
+### 🎯 Level Goal
+The password for Bandit Level 14 was stored in a file called `sshkey.private`. My task was to use this private SSH key to log into the next level. 
+
+---
+
+### 💻 Steps I Followed:
+1. First, I logged into the Bandit Level 12 server using the password retrieved from the previous level:
+
+```bash
+ssh bandit13@bandit.labs.overthewire.org -p 2220
+```
+
+2. I listed the directory contents to confirm the presence of `sshkey.private`
+
+```bash
+ls
+```
+
+3. To use the private SSH key to log into Bandit Level 14, I ensured the key had proper permissions:
+
+```bash
+chmod 600 sshkey.private
+```
+
+4. I used the private key to log into Bandit Level 14:
+
+```bash
+ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
+```
+
+<div style="text-align: center; margin: 20px 0;">
+  <h2 style="font-family: 'Arial', sans-serif; color: #FF5722; font-size: 24px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">🎥Live Demonstration</h2>
+  <div style="width: 400px; margin: 0 auto; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/Linux/Notes/Images/Level%2013-14.gif?raw=true" width="100%" />
+  </div>
+</div>
+
+--- 
+
+##  Bandit Level 14 → Level 15
+---
+
+### 🎯 Level Goal
+The password for Bandit Level 15 was stored on a server listening on port 3000 of `localhost`. My task was to retrieve the password by sending a request to the server.
+
+---
+
+### 💻 Steps I Followed:
+1. First, I logged into the Bandit Level 14 server using the password retrieved from the previous level:
+
+```bash
+ssh bandit14@bandit.labs.overthewire.org -p 2220
+```
+
+2. I used the `nc` (netcat) command to interact with the listening server:
+
+```bash
+nc localhost 30000
+```
+
+3. I entered the password for Bandit Level 14 to receive the password for Bandit Level 15.
+
+4. Using the retrieved password, I logged into Bandit Level 15:
+
+```bash
+ssh bandit15@bandit.labs.overthewire.org -p 2220
+```
+
+<div style="text-align: center; margin: 20px 0;">
+  <h2 style="font-family: 'Arial', sans-serif; color: #FF5722; font-size: 24px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">🎥Live Demonstration</h2>
+  <div style="width: 400px; margin: 0 auto; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/Linux/Notes/Images/Level%2014-15.gif?raw=true" width="100%" />
+  </div>
+</div>
+
+---
+
+##  Bandit Level 15 → Level 16
+---
+
+### 🎯 Level Goal
+The password for Bandit Level 16 was stored on a server that required an encrypted connection over SSL on a specific port. My task was to retrieve the password using `openssl`.
+
+---
+
+### 💻 Steps I Followed:
+1. First, I logged into the Bandit Level 15 server using the password retrieved from the previous level:
+
+```bash
+ssh bandit15@bandit.labs.overthewire.org -p 2220
+```
+
+2. I used the `openssl` to connect to the listening server:
+
+```bash
+openssl s_client -connect localhost:31790
+```
+
+3. The server displayed the password for Bandit Level 16.
+
+4. Using the retrieved password, I logged into Bandit Level 16:
+
+```bash
+ssh bandit16@bandit.labs.overthewire.org -p 2220
+```
+
+<div style="text-align: center; margin: 10px 0;">
+  <h3 style="font-family: 'Arial', sans-serif; color: #FF5722; font-size: 18px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px;">🎥Live Demonstration</h3>
+  <div style="width: 20px; margin: 0 auto; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+    <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/Linux/Notes/Images/Level%2015-16.gif?raw=true" width="45%" />
+  </div>
+</div>
+
+
+--- 
+
+##  Bandit Level 16 → Level 17
+---
+
+### 🎯 Level Goal
+The password for Bandit Level 17 was stored in a file on a specific port. My task was to retrieve the file, which was protected by RSA private key authentication.
+
+---
+
+### 💻 Steps I Followed:
+1. First, I logged into the Bandit Level 16 server using the password retrieved from the previous level:
+
+```bash
+ssh bandit16@bandit.labs.overthewire.org -p 2220
+```
+
+2. I used `nnmap` to scan ports:
+
+```bash
+nmap -p 31000-32000 localhost
+```
+
+3. Identified the correct port and used `openssl` to retrieve the RSA private key:
+
+```bash
+openssl s_client -connect localhost:31790
+```
+
+4. Copied the RSA private key to a local file and used it to log into Bandit Level 17:
+
+```bash
+ssh -i private_key bandit17@bandit.labs.overthewire.org -p 2220
+```
+
+<div style="text-align: center; margin: 20px 0;">
+  <h2 style="font-family: 'Arial', sans-serif; color: #FF5722; font-size: 24px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">🎥Live Demonstration</h2>
+  <div style="width: 400px; margin: 0 auto; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/Linux/Notes/Images/Level%2016-17.gif?raw=true" width="50%" />
+  </div>
+</div>
+
+--- 
+
+##  Bandit Level 17 → Level 18
+---
+
+### 🎯 Level Goal
+The password for Bandit Level 18 was stored in a file that differed between two versions: `passwords.new` and `passwords.old`. My task was to find the difference between the files to retrieve the password.
+
+---
+
+### 💻 Steps I Followed:
+1. I logged into the Bandit Level 17 server:
+
+```bash
+ssh bandit17@bandit.labs.overthewire.org -p 2220 "cat readme"
+```
+
+2. Listed the directory contents to confirm the presence of `passwords.new` and `passwords.old`:
+
+```bash
+ls
+```
+
+3. Used the `diff` command to compare the two files and locate the difference:
+
+```bash
+diff passwords.new passwords.old
+```
+
+4. The output revealed the passwords for Bandit Level 18 within `passwords.new`
+
+5. Using the retrieved password, I logged into Bandit Level 18:
+
+```bash
+ssh bandit18@bandit.labs.overthewire.org -p 2220
+```
+
+<div style="text-align: center; margin: 20px 0;">
+  <h2 style="font-family: 'Arial', sans-serif; color: #FF5722; font-size: 24px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">🎥Live Demonstration</h2>
+  <div style="width: 400px; margin: 0 auto; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/Linux/Notes/Images/Level%2017-18.gif?raw=true" width="100%" />
+  </div>
+</div>
+
+--- 
+
+##  Bandit Level 18 → Level 19
+---
+
+### 🎯 Level Goal
+The password for Bandit Level 19 was stored in a file called `readme` in the home directory.However the `.bashrc` file was modified to log me out upon login. My task was to bypass this restriction and retrieve the password.
+
+---
+
+### 💻 Steps I Followed:
+1. To bypass the `.bashrc` logout mechanism, I logged into the server and immediately switched to `/bin/sh` using the `-t` flag:
+
+```bash
+ssh bandit18@bandit.labs.overthewire.org -p 2220 -t "/bin/sh"
+```
+
+2. Once I logged in, i listed the contents of the home directory to confirm the presence of the `readme` file:
+
+```bash
+ls
+```
+
+3. I used the `cat` command to view the contents of the `readme` file:
+
+```bash
+cat readme
+```
+
+4. The output revealed the password for Bandit Level 19.
+
+5. Using the retrieved password, I logged into Bandit Level 18:
+
+```bash
+ssh bandit19@bandit.labs.overthewire.org -p 2220
+```
+
+<div style="text-align: center; margin: 20px 0;">
+  <h2 style="font-family: 'Arial', sans-serif; color: #FF5722; font-size: 24px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">🎥Live Demonstration</h2>
+  <div style="width: 400px; margin: 0 auto; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/Linux/Notes/Images/Level%2018-19.gif?raw=true" width="100%" />
+  </div>
+</div>
+
+---
+
+##  Bandit Level 19 → Level 20
+---
+
+### 🎯 Level Goal
+The password for Bandit Level 20 was stored in a file on a remote server. My task was to access it using a specific command that made use of a binary.
+
+---
+
+### 💻 Steps I Followed:
+1. I logged into the Bandit Level 19 server:
+
+```bash
+ssh bandit19@bandit.labs.overthewire.org -p 2220 -t "/bin/sh"
+```
+
+2. Used the binary `./bandit20-do` to execute a remote command and retrieve the password:
+
+```bash
+./bandit20-do cat /etc/bandit_pass/bandit20
+```
+
+3. The output displayed the password for Bandit Level 20.
+
+4. Using the retrieved password, I logged into Bandit Level 20:
+
+```bash
+ssh bandit20@bandit.labs.overthewire.org -p 2220
+```
+
+<div style="text-align: center; margin: 20px 0;">
+  <h2 style="font-family: 'Arial', sans-serif; color: #FF5722; font-size: 24px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">🎥Live Demonstration</h2>
+  <div style="width: 400px; margin: 0 auto; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/Linux/Notes/Images/Level%2019-20.gif?raw=true" width="50%" />
+  </div>
+</div>
 
 --- 
 

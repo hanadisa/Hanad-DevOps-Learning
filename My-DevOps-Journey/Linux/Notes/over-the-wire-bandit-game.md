@@ -70,10 +70,13 @@ For those unfamiliar, Bandit is a wargame designed to enhance your ability to wo
 ## Challenges Faced
 ---
 
-One particularly tricky level for me was Level 6 → Level 7. The challenge involved locating a file with specific properties across the entire server using the find command:
+One particularly tricky level for me was Level 16 → Level 17. The challenge required scanning for open ports using `nmap` and connecting to the correct port to retrieve an RSA private key. Then, I had to carefully copy the key, ensure it had proper permissions, and use it to log into the next level. Commands like the following proved essential:
 
 ```bash
-find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+nmap -p 31000-32000 localhost
+openssl s_client -connect localhost:31790
+chmod 600 rsa_key
+ssh -i rsa_key bandit17@bandit.labs.overthewire.org -p 2220
 ```
 
 ---

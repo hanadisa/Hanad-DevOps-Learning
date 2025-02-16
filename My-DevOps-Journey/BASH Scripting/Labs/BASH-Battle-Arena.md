@@ -9,3 +9,12 @@ The **Bash Battle Arena** is a set of scripting challenges designed to test and 
 These challenges reinforce my understanding of **Bash scripting fundamentals**, preparing me for more advanced automation tasks in my DevOps journey. 🚀  
 
 
+---
+
+## Level 1: The Basics
+---
+
+### 🎯 The Mission
+Create a directory named **Arena** and then inside it, create three files: **warrior.txt**, **mage.txt**, and **archer.txt**. List the contents of the **Arena** directory.
+
+---

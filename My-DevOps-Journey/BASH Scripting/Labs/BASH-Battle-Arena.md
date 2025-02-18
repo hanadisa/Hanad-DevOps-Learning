@@ -213,3 +213,20 @@ fi # End of if-else statement
     <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/BASH%20Scripting/Labs/Images/Level%207.gif?raw=true" alt="Level 7 GIF" width="100%" />
   </div>
 </div>
+
+---
+
+## Level 8: Multi-File Searcher
+---
+
+### 🎯 The Mission
+Create a script that searches for a specific word or phrase across all .log files in a directory and outputs the names of the files that contain the word or phrase.
+
+---
+### 🛠 **Solution:**  
+Steps I followed to complete the challenge:
+```bash
+#!/bin/bash
+
+
+```

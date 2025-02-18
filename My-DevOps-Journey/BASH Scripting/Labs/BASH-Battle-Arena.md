@@ -187,3 +187,29 @@ fi
 
 ### 🎯 The Mission
 Write a script that sorts all .txt files in a directory by their size, from smallest to largest, and displays the sorted list.
+
+---
+### 🛠 **Solution:**  
+Steps I followed to complete the challenge:
+```bash
+#!/bin/bash
+
+echo "What is the name of the directory?" # Prompt the user for a directory name
+read directory_name # Store the user input in the variable 'directory_name'
+
+if [ ! -d "$directory_name" ]; then # Check if the directory does NOT exist ('-d' checks for a directory, '!' negates the condition)
+    echo "Sorry. The directory you provided doesn't exist." # Print an error message if the directory doesn't exist
+else # If the directory exists, proceed with the next steps
+    sizes=$(ls -l "$directory_name" | sort -k 5 -h | awk '{print $9, $5}')
+    # 1. 'ls -l "$directory_name"' → List files with details
+    # 2. 'sort -k 5 -h' → Sort by the 5th column (file size), in human-readable format
+    # 3. 'awk '{print $9, $5}'' → Extract and display only the filename (9th column) and size (5th column)
+    echo "Here are the sizes of all the files within the '$directory_name' directory, sorted from smallest to largest: $sizes" # Display the sorted file sizes
+fi # End of if-else statement
+```
+<div style="text-align: center; margin: 20px 0;">
+  <h2 style="font-family: 'Arial', sans-serif; color: #FF5722; font-size: 24px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">🎥Live Demonstration</h2>
+  <div style="width: 400px; margin: 0 auto; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/BASH%20Scripting/Labs/Images/Level%207.gif?raw=true" alt="Level 7 GIF" width="100%" />
+  </div>
+</div>

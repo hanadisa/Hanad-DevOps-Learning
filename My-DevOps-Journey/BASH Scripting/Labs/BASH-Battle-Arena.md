@@ -8,6 +8,25 @@ The **Bash Battle Arena** is a set of scripting challenges designed to test and 
 
 These challenges reinforce my understanding of **Bash scripting fundamentals**, preparing me for more advanced automation tasks in my DevOps journey. 🚀  
 
+## 📜 Table of Contents
+
+- [Level 1: The Basics](#level-1-the-basics)
+- [Level 2: Variables and Loops](#level-2-variables-and-loops)
+- [Level 3: Conditional Statements](#level-3-conditional-statements)
+- [Level 4: File Manipulation](#level-4-file-manipulation)
+- [Level 5: The Boss Battle - Combining Basics](#level-5-the-boss-battle---combining-basics)
+- [Level 6: Argument Parsing](#level-6-argument-parsing)
+- [Level 7: File Sorting Script](#level-7-file-sorting-script)
+- [Level 8: Multi-File Searcher](#level-8-multi-file-searcher)
+- [Level 9: Script to Monitor Directory Changes](#level-9-script-to-monitor-directory-changes)
+- [Level 10: Boss Battle 2 - Intermediate Scripting](#level-10-boss-battle-2---intermediate-scripting)
+- [Level 11: Automated Disk Space Report](#level-11-automated-disk-space-report)
+- [Level 12: Simple Configuration File Parser](#level-12-simple-configuration-file-parser)
+- [Level 13: Backup Script with Rotation](#level-13-backup-script-with-rotation)
+- [Level 14: User-Friendly Menu Script](#level-14-user-friendly-menu-script)
+- [Level 15: Boss Battle 3 - Advanced Scripting](#level-15-boss-battle-3---advanced-scripting)
+
+
 
 ---
 

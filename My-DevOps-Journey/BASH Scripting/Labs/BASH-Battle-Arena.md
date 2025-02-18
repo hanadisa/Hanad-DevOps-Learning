@@ -46,6 +46,7 @@ Create a script that outputs the numbers 1 to 10, one number per line.
 Steps I followed to complete the challenge:
 ```bash
 #!/bin/bash
+
 while ((num <= 10)); do # Start a loop that runs while while 'num' is less than or equal to 10
   echo "$num" # Prints the current value of 'num'
   ((num++)) # Increment 'num' by 1
@@ -71,6 +72,7 @@ Write a script that checks if a file named **hero.txt** exists in the **Arena** 
 Steps I followed to complete the challenge:
 ```bash
 #!/bin/bash
+
 if [ -f Arena/hero.txt ]; then # Check if 'hero.txt exists inside the 'Arena' directory
   echo "Hero found!" # If the file exists, print this message
 else
@@ -97,6 +99,7 @@ Create a script that copies all **.txt** files from the **Arena** directory to a
 Steps I followed to complete the challenge:
 ```bash
 #!/bin/bash
+
 mkdir Backup # Create a directory named 'Backup'
 cp Arena/*.txt Backup/ # Copy all .txt files from 'Arena' directory to 'Backup'
 ```
@@ -126,6 +129,7 @@ Combine what you've learnt! Write a script that:
 Steps I followed to complete the challenge:
 ```bash
 #!/bin/bash
+
 mkdir Battlefield # Create a directory named 'Battlefield'
 touch Battlefield/knight.txt Battlefield/sorcerer.txt Battlefield/rogue.txt # Create three text files inside 'Battlefield'
 
@@ -153,3 +157,25 @@ ls Archive # List all files inside 'Archive' directory
 
 ### 🎯 The Mission
 Write a script that accepts a filename as an argument and prints the number of lines in that file. If no filename is provided, display a message saying 'No file provided'.
+
+---
+### 🛠 **Solution:**  
+Steps I followed to complete the challenge:
+```bash
+#!/bin/bash
+
+if [ $# == 0]; then
+  echo "No file provided."
+elif  [ ! -f $1 ]; then
+  echo "$1 doesn't exist."
+else
+  line_count=$(wc -l < $1)
+  echo "There are $line_count lines in the file called £1!"
+fi
+```
+<div style="text-align: center; margin: 20px 0;">
+  <h2 style="font-family: 'Arial', sans-serif; color: #FF5722; font-size: 24px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">🎥Live Demonstration</h2>
+  <div style="width: 400px; margin: 0 auto; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/BASH%20Scripting/Labs/Images/Level%206.gif?raw=true" alt="Level 6 GIF" width="100%" />
+  </div>
+</div>

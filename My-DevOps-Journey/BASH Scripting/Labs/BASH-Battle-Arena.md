@@ -124,3 +124,32 @@ Combine what you've learnt! Write a script that:
 
 ### 🛠 **Solution:**  
 Steps I followed to complete the challenge:
+```bash
+#!/bin/bash
+mkdir Battlefield # Create a directory named 'Battlefield'
+touch Battlefield/knight.txt Battlefield/sorcerer.txt Battlefield/rogue.txt # Create three text files inside 'Battlefield'
+
+if [ -f Battlefield/knight.txt ]; then # Check if 'knight.txt' exists inside 'Battlefield'
+    mkdir Archive # Create a directory named 'Archive'
+    mv Battlefield/knight.txt Archive/ # Move 'knight.txt' from 'Battlefield' to 'Archive'
+else    
+    echo "The file knight.txt cannot be found" # Print message if 'knight.txt' does not exist
+fi # End of if statement
+
+ls Battlefield # List all files inside 'Battlefield' directory
+ls Archive # List all files inside 'Archive' directory
+```
+<div style="text-align: center; margin: 20px 0;">
+  <h2 style="font-family: 'Arial', sans-serif; color: #FF5722; font-size: 24px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">🎥Live Demonstration</h2>
+  <div style="width: 400px; margin: 0 auto; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/BASH%20Scripting/Labs/Images/Level%205.gif?raw=true" alt="Level 5 GIF" width="100%" />
+  </div>
+</div>
+
+---
+
+## Level 6: Argument Parsing
+---
+
+### 🎯 The Mission
+Write a script that accepts a filename as an argument and prints the number of lines in that file. If no filename is provided, display a message saying 'No file provided'.

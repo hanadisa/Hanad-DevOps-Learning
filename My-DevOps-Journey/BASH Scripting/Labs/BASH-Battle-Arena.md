@@ -179,3 +179,11 @@ fi
     <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/BASH%20Scripting/Labs/Images/Level%206.gif?raw=true" alt="Level 6 GIF" width="100%" />
   </div>
 </div>
+
+---
+
+## Level 7: File Sorting Script
+---
+
+### 🎯 The Mission
+Write a script that sorts all .txt files in a directory by their size, from smallest to largest, and displays the sorted list.

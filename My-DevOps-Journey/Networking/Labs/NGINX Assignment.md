@@ -42,3 +42,27 @@ Below are the screenshots documenting the process:
 
 2. **Purchase Confirmation:**  
    <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/Networking/Labs/Images/DomainPurchase.png?raw=true" width="600" />
+
+# Step 2: EC2 Instance Setup
+
+In this step, I created an EC2 instance with Ubuntu and set it up with NGINX on port 80. The process involved:
+
+- Logging into the AWS Management Console.
+- Launching a new EC2 instance with Ubuntu.
+- Configuring the Security Group to allow SSH (port 22) and HTTP (port 80) traffic.
+- Connecting to the instance via SSH.
+- Installing and starting NGINX.
+
+Below are the screenshots documenting the process:
+
+1. **EC2 Instance Launch:**  
+   <img src="./screenshots/ec2-launch.png" alt="EC2 Instance Launch Screenshot" width="600" />
+
+2. **Instance Details:**  
+   <img src="./screenshots/ec2-details.png" alt="EC2 Instance Details Screenshot" width="600" />
+
+3. **SSH Connection Terminal:**  
+   <img src="./screenshots/ssh-connection.png" alt="SSH Connection Screenshot" width="600" />
+
+4. **NGINX Installation & Start:**  
+   <img src="./screenshots/nginx-install.png" alt="NGINX Installation Screenshot" width="600" />

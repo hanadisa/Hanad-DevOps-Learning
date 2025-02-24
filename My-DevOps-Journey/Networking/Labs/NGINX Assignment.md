@@ -2,32 +2,41 @@
 
 ## Objectives 🎯
 
-- **Domain Registration:** Purchase your domain via Cloudflare (or AWS Route53, preferably Cloudflare) for example, `luqman.co.uk`.
-- **EC2 Instance Setup:** Launch an EC2 instance running Ubuntu with NGINX installed on port 80.
-- **DNS Configuration:** Add an A record in Cloudflare pointing to your EC2 instance so you can access your site at, for instance, `nginx.luqman.co.uk`.
-- **Verification:** Ensure that accessing the domain displays the NGINX welcome page.
-
+- **Domain Registration:** Purchase a domain via Cloudflare and configure DNS.
+- **EC2 Instance Setup:** Launch an AWS EC2 instance with Ubuntu and NGINX.
+- **DNS Configuration:** Add an A record in Cloudflare pointing to the EC2 instance.
+- **HTTPS (SSL/TLS):** Secure the website using Let's Encrypt (Certbot).
+- **Verification:** Ensure `nginx.hanadisa.com` loads correctly over HTTPS.
 ---
 
 ## Documentation Overview 🔍
 
 This repository details the following steps:
 
-1. **Domain Acquisition:**  
+1. **Domain Acquisition:** ™️
    - Log in to Cloudflare and purchase your domain.
 
-2. **EC2 Instance Setup:**  
+2. **EC2 Instance Setup:** 💻
    - Create an EC2 instance with Ubuntu.
    - Connect via SSH.
    - Install and start NGINX on port 80.
 
-3. **DNS Setup with Cloudflare:**  
+3. **DNS Setup with Cloudflare:** ☁️
    - Add an A record in Cloudflare for your domain.
-   - Verify DNS propagation by accessing your domain (e.g., `nginx.luqman.co.uk`).
+   - Verify DNS propagation by accessing your domain (e.g., `nginx.hanadisa.com`).
 
-Each step is documented with screenshots and command outputs to guide you through the process.
+4. **Enabling HTTPS (SSL/TLS):** 🔒
+   - Use Let's Encrypt (Certbot) to generate an SSL certificate.
+   - Configure NGINX to serve traffic securely over `https://nginx.hanadisa.com`.
 
-# Step 1: Domain Acquisition
+5. **Testing NGINX Deployment:** ✅
+   - Verify that `https://nginx.hanadisa.com` loads successfully in a browser.
+   - Confirm that the NGINX welcome page is displayed.
+   - Ensure SSL/TLS is working and the site is secured.
+
+Each step is documented with **screenshots** and **command outputs** to provide a clear and structured guide.
+
+# Step 1: Domain Acquisition ™️
 
 In this step, I logged into Cloudflare and purchased my domain. This process involved:
 
@@ -43,7 +52,7 @@ Below are the screenshots documenting the process:
 2. **Purchase Confirmation:**  
    <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/Networking/Labs/Images/DomainPurchase.png?raw=true" width="600" />
 
-# Step 2: EC2 Instance Setup
+# Step 2: EC2 Instance Setup 💻
 
 In this step, I created an EC2 instance with Ubuntu and set it up with NGINX on port 80. The process involved:
 
@@ -67,7 +76,7 @@ Below are the screenshots documenting the process:
 4. **NGINX Installation & Start:**  
    <img src="./screenshots/nginx-install.png" alt="NGINX Installation Screenshot" width="600" />
 
-# Step 3: Cloudflare DNS Setup
+# Step 3: Cloudflare DNS Setup ☁️
 
 In this step, I configured the DNS settings in Cloudflare to point to my EC2 instance. The process involved:
 
@@ -86,6 +95,42 @@ Below are the screenshots documenting the process:
 3. **DNS Propagation Verification:**  
    <img src="./screenshots/dns-verification.png" alt="DNS Verification Screenshot" width="600" />
 
+# Step 4: Enabling HTTPS (SSL/TLS) 🔒
+
+After setting up NGINX and configuring Cloudflare, I secured `nginx.hanadisa.com` with **Let's Encrypt (Certbot)** to enable HTTPS.
+
+### **Verification Using Browser**
+I opened my browser and visited:  https://nginx.hanadisa.com/
+
+📸 **SSL Verification Screenshot:**  
+![SSL Verification](./screenshots/ssl-verification.png)
+
+This confirms that:
+- The site is **secured with HTTPS** 🔒.
+- The **SSL certificate is active and trusted**.
+- **All HTTP traffic is automatically redirected to HTTPS**.
+- **Cloudflare DNS & NGINX are properly handling HTTPS traffic**.
+
+✅ The SSL setup is complete, and the site is now secure!
+
+# Step 5: Testing NGINX Deployment ✅
+
+After setting up NGINX and configuring Cloudflare, I verified that `nginx.hanadisa.com` is accessible in the browser.
+
+### **Verification Using Browser**
+I opened my browser and visited: https://nginx.hanadisa.com/
+
+📸 **NGINX Welcome Page Screenshot:**  
+![NGINX Welcome Page](./screenshots/nginx-welcome.png)
+
+This confirms that:
+- My EC2 instance is serving web requests successfully.
+- NGINX is installed and running.
+- My domain (`nginx.hanadisa.com`) is correctly pointing to my EC2 instance.
+- SSL/TLS is enabled and working.
+
+✅ The setup is complete, and the website is live!
+
 ---
 
 # Conclusion
@@ -98,5 +143,6 @@ I successfully completed the assignment by:
 - **Verification:** Confirmed that accessing the subdomain displays the NGINX welcome page.
 
 This documentation, complete with step-by-step instructions and screenshots, provides a clear guide to replicating the setup. 
+
 
 *Visit [nginx.hanadisa.com](https://nginx.hanadisa.com) to see the final result!*

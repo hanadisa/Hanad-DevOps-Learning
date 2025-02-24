@@ -65,16 +65,16 @@ In this step, I created an EC2 instance with Ubuntu and set it up with NGINX on 
 Below are the screenshots documenting the process:
 
 1. **EC2 Instance Launch:**  
-   <img src="./screenshots/ec2-launch.png" alt="EC2 Instance Launch Screenshot" width="600" />
+   <img src="https://github.com/user-attachments/assets/02f4055f-d77c-4975-91c4-53e627703914" alt="EC2 Instance Launch Screenshot" width="600" />
 
 2. **Instance Details:**  
    <img src="./screenshots/ec2-details.png" alt="EC2 Instance Details Screenshot" width="600" />
 
 3. **SSH Connection Terminal:**  
-   <img src="./screenshots/ssh-connection.png" alt="SSH Connection Screenshot" width="600" />
+   <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/Networking/Labs/Images/SSH-Connection.png?raw=true" width="600" />
 
 4. **NGINX Installation & Start:**  
-   <img src="./screenshots/nginx-install.png" alt="NGINX Installation Screenshot" width="600" />
+   <img src="https://github.com/user-attachments/assets/7858a47a-8317-46ed-ab2f-5ddf7120ebf4" width="600" />
 
 # Step 3: Cloudflare DNS Setup ☁️
 
@@ -87,13 +87,13 @@ In this step, I configured the DNS settings in Cloudflare to point to my EC2 ins
 Below are the screenshots documenting the process:
 
 1. **Accessing DNS Settings:**  
-   <img src="./screenshots/dns-settings.png" alt="DNS Settings Screenshot" width="600" />
+   <img src="https://github.com/user-attachments/assets/bab1dd15-7f4e-4246-aa12-ff51001d3b20" width="600" />
 
 2. **Adding the A Record:**  
-   <img src="./screenshots/add-a-record.png" alt="Add A Record Screenshot" width="600" />
+   <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/Networking/Labs/Images/A-Record.png?raw=true" alt="Add A Record Screenshot" width="600" />
 
 3. **DNS Propagation Verification:**  
-   <img src="./screenshots/dns-verification.png" alt="DNS Verification Screenshot" width="600" />
+   <img src="https://github.com/user-attachments/assets/acb9d439-b38f-4d0e-ac1c-066866ab4377" width="600" />
 
 # Step 4: Enabling HTTPS (SSL/TLS) 🔒
 
@@ -103,7 +103,8 @@ After setting up NGINX and configuring Cloudflare, I secured `nginx.hanadisa.com
 I opened my browser and visited:  https://nginx.hanadisa.com/
 
 📸 **SSL Verification Screenshot:**  
-![SSL Verification](./screenshots/ssl-verification.png)
+
+<img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/Networking/Labs/Images/HTTPS-Enabling.png?raw=true" width="600" />
 
 This confirms that:
 - The site is **secured with HTTPS** 🔒.
@@ -121,7 +122,8 @@ After setting up NGINX and configuring Cloudflare, I verified that `nginx.hanadi
 I opened my browser and visited: https://nginx.hanadisa.com/
 
 📸 **NGINX Welcome Page Screenshot:**  
-![NGINX Welcome Page](./screenshots/nginx-welcome.png)
+
+<img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/Networking/Labs/Images/Deployment-Test.png?raw=true" width="600" />
 
 This confirms that:
 - My EC2 instance is serving web requests successfully.
@@ -143,6 +145,3 @@ I successfully completed the assignment by:
 - **Verification:** Confirmed that accessing the subdomain displays the NGINX welcome page.
 
 This documentation, complete with step-by-step instructions and screenshots, provides a clear guide to replicating the setup. 
-
-
-*Visit [nginx.hanadisa.com](https://nginx.hanadisa.com) to see the final result!*

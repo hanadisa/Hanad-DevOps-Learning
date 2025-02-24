@@ -68,7 +68,8 @@ Below are the screenshots documenting the process:
    <img src="https://github.com/user-attachments/assets/02f4055f-d77c-4975-91c4-53e627703914" alt="EC2 Instance Launch Screenshot" width="600" />
 
 2. **Instance Details:**  
-   <img src="./screenshots/ec2-details.png" alt="EC2 Instance Details Screenshot" width="600" />
+   <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/Networking/Labs/Images/EC2-Details.gif?raw=true" alt="EC2 Instance 
+      Details GIF" width="600" />
 
 3. **SSH Connection Terminal:**  
    <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/Networking/Labs/Images/SSH-Connection.png?raw=true" width="600" />

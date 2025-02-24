@@ -61,7 +61,13 @@ Below are the screenshots documenting the process:
 2. **Instance Details:**  
    <img src="./screenshots/ec2-details.png" alt="EC2 Instance Details Screenshot" width="600" />
 
-   # Step 3: Cloudflare DNS Setup
+3. **SSH Connection Terminal:**  
+   <img src="./screenshots/ssh-connection.png" alt="SSH Connection Screenshot" width="600" />
+
+4. **NGINX Installation & Start:**  
+   <img src="./screenshots/nginx-install.png" alt="NGINX Installation Screenshot" width="600" />
+
+# Step 3: Cloudflare DNS Setup
 
 In this step, I configured the DNS settings in Cloudflare to point to my EC2 instance. The process involved:
 
@@ -80,8 +86,6 @@ Below are the screenshots documenting the process:
 3. **DNS Propagation Verification:**  
    <img src="./screenshots/dns-verification.png" alt="DNS Verification Screenshot" width="600" />
 
-*Note: Replace the image paths with the actual paths to your screenshots.*
-
 ---
 
 # Conclusion
@@ -96,10 +100,3 @@ I successfully completed the assignment by:
 This documentation, complete with step-by-step instructions and screenshots, provides a clear guide to replicating the setup. 
 
 *Visit [nginx.hanadisa.com](https://nginx.hanadisa.com) to see the final result!*
-
-
-3. **SSH Connection Terminal:**  
-   <img src="./screenshots/ssh-connection.png" alt="SSH Connection Screenshot" width="600" />
-
-4. **NGINX Installation & Start:**  
-   <img src="./screenshots/nginx-install.png" alt="NGINX Installation Screenshot" width="600" />

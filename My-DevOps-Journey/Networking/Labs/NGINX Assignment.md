@@ -61,6 +61,43 @@ Below are the screenshots documenting the process:
 2. **Instance Details:**  
    <img src="./screenshots/ec2-details.png" alt="EC2 Instance Details Screenshot" width="600" />
 
+   # Step 3: Cloudflare DNS Setup
+
+In this step, I configured the DNS settings in Cloudflare to point to my EC2 instance. The process involved:
+
+- Logging into Cloudflare and navigating to the DNS settings for `hanadisa.com`.
+- Adding an A record for a subdomain (e.g., `nginx.hanadisa.com`) that points to the public IP address of my EC2 instance.
+- Verifying that the DNS changes have propagated and that I can access the NGINX welcome page using the subdomain.
+
+Below are the screenshots documenting the process:
+
+1. **Accessing DNS Settings:**  
+   <img src="./screenshots/dns-settings.png" alt="DNS Settings Screenshot" width="600" />
+
+2. **Adding the A Record:**  
+   <img src="./screenshots/add-a-record.png" alt="Add A Record Screenshot" width="600" />
+
+3. **DNS Propagation Verification:**  
+   <img src="./screenshots/dns-verification.png" alt="DNS Verification Screenshot" width="600" />
+
+*Note: Replace the image paths with the actual paths to your screenshots.*
+
+---
+
+# Conclusion
+
+I successfully completed the assignment by:
+
+- **Domain Acquisition:** Purchased `hanadisa.com` through Cloudflare.
+- **EC2 Instance Setup:** Launched an AWS EC2 instance running Ubuntu with NGINX installed on port 80.
+- **DNS Configuration:** Configured Cloudflare DNS to point a subdomain (e.g., `nginx.hanadisa.com`) to my EC2 instance.
+- **Verification:** Confirmed that accessing the subdomain displays the NGINX welcome page.
+
+This documentation, complete with step-by-step instructions and screenshots, provides a clear guide to replicating the setup. 
+
+*Visit [nginx.hanadisa.com](https://nginx.hanadisa.com) to see the final result!*
+
+
 3. **SSH Connection Terminal:**  
    <img src="./screenshots/ssh-connection.png" alt="SSH Connection Screenshot" width="600" />
 

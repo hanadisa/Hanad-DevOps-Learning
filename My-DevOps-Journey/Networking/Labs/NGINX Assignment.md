@@ -26,3 +26,19 @@ This repository details the following steps:
    - Verify DNS propagation by accessing your domain (e.g., `nginx.luqman.co.uk`).
 
 Each step is documented with screenshots and command outputs to guide you through the process.
+
+# Step 1: Domain Acquisition
+
+In this step, I logged into Cloudflare and purchased my domain. This process involved:
+
+- Accessing the Cloudflare Dashboard.
+- Searching for the desired domain (e.g., `hanadisa.com`).
+- Completing the purchase using Cloudflare’s registrar service.
+
+Below are the screenshots documenting the process:
+
+1. **Domain Search & Selection:**  
+   <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/Networking/Labs/Images/DomainRegistry.png?raw=true" width="600" />
+
+2. **Purchase Confirmation:**  
+   <img src="https://github.com/hanadisa/Hanad-DevOps-Learning/blob/main/My-DevOps-Journey/Networking/Labs/Images/DomainPurchase.png?raw=true" width="600" />

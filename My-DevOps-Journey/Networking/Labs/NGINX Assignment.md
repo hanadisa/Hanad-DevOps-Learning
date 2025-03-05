@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Task: Deploy NGINX on EC2 with Cloudflare DNS ☁️
 
 ## Objectives 🎯

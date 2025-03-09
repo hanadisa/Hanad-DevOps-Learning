@@ -49,3 +49,26 @@ az acr login --name sampleregistry101
 
 ✅ **Screenshot of Successful ACR Login:**
 ![ACR Created](./screenshots/acr-created.png)
+
+---
+
+## 🔹 Step 3 & 4: Tagging and Pushing the Docker Image to ACR
+Once authenticated, I tagged the Docker image to match ACR’s repository format and pushed it to ACR.
+
+```sh
+docker tag hanadisa/flask-mysql:v1 sampleregistry101.azurecr.io/flask-mysql:v1
+```
+
+✅ **Screenshot of ACR Setup & Image Push:**
+![ACR Created](./screenshots/acr-created.png)
+
+---
+
+## **✅ Summary**
+I successfully completed the following steps:
+
+1) Manually created an Azure Container Registry (ACR) in the Azure Portal.
+2) Logged into Azure and authenticated with ACR using the CLI.
+3) Tagged the Docker image to match ACR’s naming format.
+4) Pushed the Docker image to Azure ACR.
+5) This image is now stored in Azure ACR and can be pulled to run in Azure Kubernetes Service (AKS), Azure App Services, or other Azure cloud environments.

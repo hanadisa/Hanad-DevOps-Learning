@@ -15,10 +15,26 @@ I wanted a **private, secure** registry to store and manage my Docker images wit
 ✅ Pushed images to **ACR**  
 ✅ Pulled images from **ACR** for deployment  
 
+## 📌 **Prerequisites**
+Before I began, I made sure I had the following:
+- **Azure CLI** installed (`az --version` to check)
+- **Docker** installed (`docker --version` to check)
+- An **Azure Subscription** (Sign up [here](https://azure.microsoft.com/en-gb/free/) if you don’t have one)
+
 ---
 
-## 🛠 Prerequisites  
-Before starting, I ensured I had the following:  
-- ✅ **An active Azure subscription** (Pay-As-You-Go)  
-- ✅ **Azure CLI installed** ([Install Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli))  
-- ✅ **Docker installed** ([Install Docker](https://docs.docker.com/get-docker/))  
+## 🔹 **Step 1: Manually Creating Azure Container Registry (ACR)**
+Instead of using the CLI, I created the ACR manually through the **Azure Portal**:
+
+1. Navigated to **Azure Portal** ([portal.azure.com](https://portal.azure.com/)).
+2. Searched for **Container Registry** and clicked **Create**.
+3. Filled in the necessary details:
+   - **Resource Group**: `RG1`
+   - **Registry Name**: `sampleregistry101`
+   - **SKU**: `Basic`
+4. Clicked **Review + Create**, then **Create**.
+
+✅ **Screenshot of Successful ACR Creation:**
+![ACR Created](./screenshots/acr-created.png)
+
+---

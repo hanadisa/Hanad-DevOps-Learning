@@ -38,3 +38,14 @@ Instead of using the CLI, I created the ACR manually through the **Azure Portal*
 ![ACR Created](./screenshots/acr-created.png)
 
 ---
+
+## 🔹 **Step 2: Logging in to Azure and ACR**
+After creating the ACR, I logged into Azure using the CLI and authenticated with my **Azure Container Registry**:
+
+```sh
+az login
+az acr login --name sampleregistry101
+```
+
+✅ **Screenshot of Successful ACR Login:**
+![ACR Created](./screenshots/acr-created.png)

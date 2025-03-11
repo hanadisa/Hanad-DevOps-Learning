@@ -1,8 +1,8 @@
-FROM python:3.8-slim
+# Stage 1: Build Stage
+
+FROM python:3.8-slim as Build
 
 WORKDIR /app
-
-COPY . .
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
@@ -11,9 +11,18 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     pkg-config && \
     rm -rf /var/lib/apt/lists/*  # Cleanup to reduce image size
 
-RUN pip install --no-cache-dir flask mysqlclient
+    COPY . .
 
-EXPOSE 5000
+    RUN pip install --no-cache-dir flask mysqlclient
 
-CMD ["python", "app.py"]
+    # Stage 2: Production Stage
 
+    FROM python:3.8-slim
+
+    WORKDIR /app
+
+    COPY --from=Build /app /app
+
+    EXPOSE 5000
+
+    CMD ["python", "app.py"]

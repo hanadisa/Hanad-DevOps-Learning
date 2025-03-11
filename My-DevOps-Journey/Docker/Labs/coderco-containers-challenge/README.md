@@ -21,3 +21,11 @@ This project consists of:
 ---
 
 ## 📂 Folder Structure
+```bash
+coderco-containers-challenge/
+├── app.py 
+├── requirements.txt
+├── Dockerfile
+├── docker-compose.yml
+├── nginx.conf
+```

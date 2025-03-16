@@ -24,7 +24,6 @@ This project consists of:
 ```bash
 coderco-containers-challenge/
 ├── app.py 
-├── requirements.txt
 ├── Dockerfile
 ├── docker-compose.yml
 ├── nginx.conf

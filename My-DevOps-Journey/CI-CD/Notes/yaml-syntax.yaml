@@ -11,7 +11,7 @@ frutis:
 - banana
 - orange
 
-# nested elements
+# Nested Elements
 
 address:
   street: 123 Downing Street

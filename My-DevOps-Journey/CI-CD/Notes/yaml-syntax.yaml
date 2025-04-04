@@ -1,0 +1,19 @@
+# Key value pairs
+
+name: Hanad
+age: 19
+job: Developer
+
+# Lists
+
+frutis:
+- apple
+- banana
+- orange
+
+# nested elements
+
+address:
+  street: 123 Downing Street
+  city: London
+  country: United Kingdom
